@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="CompanyEmployees/CompanyEmployees.csproj" />
+  <Project Path="Contracts/Contracts.csproj" Id="731a3c05-b51d-46b8-b583-7cf10dce17d5" />
+  <Project Path="Entities/Entities.csproj" Id="29eec648-2a60-4bb7-9556-976a5c844d64" />
+  <Project Path="LoggerService/LoggerService.csproj" Id="dd1d210b-e43a-49a9-b638-d8f1a7386cbf" />
+  <Project Path="Repository/Repository.csproj" Id="269faf9b-f9cf-4dce-8698-0aff925e0a07" />
+</Solution>
