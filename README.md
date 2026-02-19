@@ -114,21 +114,53 @@ Swagger provides:
 ---
 
 # ⚙️ How to Run the Project
-
+### Prerequisites:
+- .NET SDK (version: ___)
+- SQL Server / SQL Server Express
+- (Optional) Visual Studio 202/2026
+  
 1. Clone the repository
 2. Configure the connection string inside `appsettings.json`
+```json
+"ConnectionStrings": {
+  "sqlConnection": "YOUR_CONNECTION_STRING_HERE"
+}
+```
 3. Apply migrations:
 
-
+A) Visual Studio Package Manager Console
+1. Set Startup Project to: CompanyEmployees
+2. Open Tools → NuGet Package Manager → Package Manager Console
+3. Run
 ```bash
+Add-Migration InitialCreate
 dotnet ef database update
 ```
 Run the application:
 ```bash
 dotnet run
 ```
+
+B) CLI
+From the solution root run:
+```
+dotnet ef migrations add InitialCreate --startup-project CompanyEmployees
+dotnet ef database update --startup-project CompanyEmployees
+```
+If EF Core can’t locate the DbContext in your setup, use --project as well (the project that contains RepositoryContext):
+```
+dotnet ef migrations add InitialCreate --project Repository --startup-project CompanyEmployees
+dotnet ef database update --project Repository --startup-project CompanyEmployees
+```
+Run the application:
+```
+dotnet run --project CompanyEmployees
+```
+
 Open Swagger:
 https://localhost:5001/swagger
+or
+http://localhost:5000/swagger
 
 
 ---
