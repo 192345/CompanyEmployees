@@ -64,6 +64,8 @@ CompanyEmployees (Web API - Host)
 
 ---
 ## Request Flow
+
+```
 Controller
 ↓
 Service Layer
@@ -73,6 +75,7 @@ Repository Layer
 DbContext (EF Core)
 ↓
 SQL Server
+```
 
 Each layer depends only on inner layers, respecting the Dependency Inversion Principle.
 
