@@ -116,12 +116,18 @@ Swagger provides:
 2. Configure the connection string inside `appsettings.json`
 3. Apply migrations:
 
-bash
+
+```bash
 dotnet ef database update
+```
 Run the application:
+```bash
 dotnet run
+```
 Open Swagger:
 https://localhost:5001/swagger
+```
+
 ---
 # Error Handling
 
