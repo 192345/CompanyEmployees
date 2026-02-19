@@ -123,57 +123,37 @@ https://localhost:5001/swagger
 
 The API includes:
 
-Global exception handling middleware
-
-Consistent HTTP responses
-
-Clean separation of error logic in the service layer
-
-(Custom exception strategy can be described here if applicable.)
+- Global exception handling middleware
+- Consistent HTTP responses
+- Clean separation of error logic in the service layer
+- (Custom exception strategy can be described here if applicable.)
 ---
 # Implemented Best Practices
+- DTO usage to avoid exposing domain entities
+- Separation of business logic via Service Layer
+- Repository abstraction over data access
+- trackChanges optimization in EF Core queries
+- Centralized IServiceManager for service coordination
+- Code First migrations
+- Attribute-based routing with route constraints
 
-DTO usage to avoid exposing domain entities
-
-Separation of business logic via Service Layer
-
-Repository abstraction over data access
-
-trackChanges optimization in EF Core queries
-
-Centralized IServiceManager for service coordination
-
-Code First migrations
-
-Attribute-based routing with route constraints
 ---
 # Technical Decisions
-
-Onion Architecture was chosen to enforce separation of concerns and low coupling.
-
-Repository Pattern abstracts persistence logic.
-
-Service Layer encapsulates business logic.
-
-Swagger enables automatic API documentation.
-
-Global middleware ensures consistent exception handling.
-
-Dependency Injection ensures loose coupling between components.
+- Onion Architecture was chosen to enforce separation of concerns and low coupling.
+- Repository Pattern abstracts persistence logic.
+- Service Layer encapsulates business logic.
+- Swagger enables automatic API documentation.
+- Global middleware ensures consistent exception handling.
+- Dependency Injection ensures loose coupling between components.
 ---
 # Future Improvements
+- Pagination support
+- Filtering & sorting
+- JWT Authentication & Authorization
+- Unit and integration testing
+- Caching strategies
+- API versioning
 
-Pagination support
-
-Filtering & sorting
-
-JWT Authentication & Authorization
-
-Unit and integration testing
-
-Caching strategies
-
-API versioning
 ---
 # Author
 
